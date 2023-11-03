@@ -14,3 +14,5 @@ Agora olhando para o case em si. Irei passar como foi a parte de código e como 
 - E sobre a parte de visualização de dados, caso seja necessário disponibilizar, vale entender qual a ferramenta de DataViz utilizada pela Zebrinha Azul, e poder fazer as visualizações, mas aí vale entender com o time de negócio da Zebrinha Azul, que insights esperam tirar dos dados, e qual o objetivo do uso dos dados.
 
 PS: ainda não adicionei uma função main.py, mas a ideia no main, seria juntar os dados dos códigos, ou na verdade, só escrever no tópico do kafka, então ainda faltaria as variáveis do kafka e tudo mais. 
+
+PS2: na pressa acabei commitando direto na main, que não é certo, deveria ter bloqueado isso no repositório, mas vou adicionar esse commit para me retratar hehe. 
