@@ -10,10 +10,18 @@ destino = ['São José dos Campos', 'Diadema']
 resultados = []
 maps_api_url = 'https://maps.googleapis.com/maps/api/directions/json?'
 
-def consultar_temperatura(origem, destino, response):
+def consultar_trajeto(origem, destino, response,maps_api_url, MAPS_API_KEY):
     i = 0 
     for i  in range(len(origem)):
         response = requests.get(maps_api_url+f'&origin={str(origem[i])}'+f'&destination={str(destino[i])}'+f'&key={MAPS_API_KEY}')
         result = json.loads(response.text)
         resultados.append(result)
     resultados
+
+#aqui posteriormente na hora de escrever nos tópicos vamos ter que filtrar os campos e com isso, na minha concepção poderíamos fazer esse recorte:
+#        result['routes'][0]['legs'][0]['duration']['text'] #tempo de viagem
+#        result['routes'][0]['legs'][0]['distance']['text'] #distância
+#        result['routes'][0]['legs'][0]['end_address'] #nome da cidade de partida
+#        result['routes'][0]['legs'][0]['start_address'] #coordenadas da cidade de partida
+#        result['routes'][0]['legs'][0]['end_location'] #nome da cidade de chegada
+#        result['routes'][0]['legs'][0]['start_location'] #coordenadas da cidade de partida
